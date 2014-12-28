@@ -34,15 +34,17 @@ public abstract class PeakElement {
 				return startIdx;
 			int mid=(startIdx+endIdx)/2;
 			int cur=num[mid];
-			Boolean leftMax=true,rightMax=true;
+			Boolean biggerthanLeft=true,biggerThanRight=true;
 			if(mid-1>-1 && cur<num[mid-1])
-				leftMax=false;
+				biggerthanLeft=false;
 			if(mid+1<=num.length && cur<num[mid+1])
-				rightMax=false;
-			if(leftMax && rightMax)
+				biggerThanRight=false;
+			if(biggerthanLeft && biggerThanRight)
 				return mid;
-			if(mid-1>-1 && cur<num[mid-1])
+			
+			if(biggerthanLeft)
 				return findPeak(num,startIdx,mid-1);
+			
 			return findPeak(num,mid+1,endIdx);
 		}
 	}
