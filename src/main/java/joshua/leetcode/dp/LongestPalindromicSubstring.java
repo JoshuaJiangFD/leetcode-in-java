@@ -1,5 +1,14 @@
 package joshua.leetcode.dp;
 
+/**
+ * Given a string S, find the longest palindromic substring in S.</br>
+ * Solution: dynamic programming.</br> 
+ *  <b>Time Complexity</b>: o(n<sup>2</sup>), <b>space complexity</b>: o(n<sup>2</sup>)</br></br> 
+ *  
+ * @see {@link joshua.leetcode.strings.LongestPalindromicSubstring}
+ * @author joy
+ *
+ */
 public abstract class LongestPalindromicSubstring {
 
 	/**
@@ -15,8 +24,7 @@ public abstract class LongestPalindromicSubstring {
 	public abstract String longestPalindrome(String s);
 
 	/**
-	 * Solution1: dynamic programming.</br> Time Complexity: o(n<sup>2</sup>),
-	 * Space Complexity: o(n<sup>2</sup>)</br> Assume: S[i...j] is the substring
+	 *Assume: S[i...j] is the substring
 	 * of S indexed from i to j(-1<i<=j<length). and LPS[i...j] is the longest
 	 * palindromic substring of S[i...j],<br>
 	 * Given known LPS[i...j-1] and LPS[i+1...j], we have:
@@ -51,7 +59,7 @@ public abstract class LongestPalindromicSubstring {
 	 * @author joy
 	 *
 	 */
-	static class Solution1 extends LongestPalindromicSubstring {
+	public static class Solution1 extends LongestPalindromicSubstring {
 
 		@Override
 		public String longestPalindrome(String s) {
@@ -199,6 +207,6 @@ public abstract class LongestPalindromicSubstring {
 			}
 			return isPalindrome[i][j];	
 		}
-	}
+	}	
 
 }
