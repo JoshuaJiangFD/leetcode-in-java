@@ -10,9 +10,10 @@ public abstract class ClimbingStairs {
 	public abstract int climbStairs(int n);
 
 	/**
-	 * time complexity: o(power(2,n)) due to repeated calculation
-	 * f(n)=f(n-1)+f(n-2), while f(n-1)=f(n-2)+f(n-3), f(n-2) is calculated more
-	 * than once.
+	 * <b>Time Complexity</b>: 2<sup>n</sup>, due to repeated calculation</br>
+	 * This is a up-bottom way of calculation. </br>
+	 * 
+	 * e.g. f(n)=f(n-1)+f(n-2), while f(n-1)=f(n-2)+f(n-3), f(n-2) is calculated more than once.</br>
 	 * 
 	 * @author Joshua.Jiang
 	 *
@@ -30,8 +31,9 @@ public abstract class ClimbingStairs {
 	}
 
 	/**
-	 * time complexity: o(n). 
-	 * which for every step only calculates and retains the result for next step.
+	 * <b>Time Complexity</b>: o(n).</br>
+	 * This is a bottom-up way of calculation. </br>
+	 * which for every step only calculates and retains the result for next step.</br>
 	 * 
 	 * @author Joshua.Jiang
 	 *

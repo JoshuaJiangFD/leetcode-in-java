@@ -20,7 +20,7 @@ public abstract class EditDistance {
 
 		@Override
 		public int minDistance(String word1, String word2) {
-			// store the result of each steps into the two dimensinal array.
+			// store the result of each steps into the two dimensional array.
 			int[][] res = new int[word1.length() + 1][word2.length() + 1];
 			for (int i = 0; i <= word1.length(); i++) {
 				res[i][0] = i;
