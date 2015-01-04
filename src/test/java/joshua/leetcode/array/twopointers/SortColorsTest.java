@@ -1,6 +1,7 @@
-package joshua.leetcode.array;
+package joshua.leetcode.array.twopointers;
 
 import static org.junit.Assert.*;
+import joshua.leetcode.array.twopointers.SortColors;
 
 import org.junit.Assert;
 import org.junit.Test;

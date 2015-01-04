@@ -1,4 +1,4 @@
-package joshua.leetcode.array;
+package joshua.leetcode.array.twopointers;
 
 /**
  * <b>Name</b>:	Sort Colors</br>
