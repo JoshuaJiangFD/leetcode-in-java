@@ -42,6 +42,7 @@ public class StringToInteger {
 		int size=0;
 		for(int idx=0;idx<str.length();idx++){
 			char ch=str.charAt(idx);
+			//parse the signal,i.e. negative or positive number
 			if(isNegative==null){
 				if(Character.isWhitespace(ch))
 					continue;
@@ -53,7 +54,7 @@ public class StringToInteger {
 						nums.push(ch-48);
 						size++;
 					}
-				/*//the first non-space character is not '-' or '=' or number.*/
+				/*the first non-space character is not '-' or '=' or number.*/
 				}else{
 					isWrong=true;
 					break;
