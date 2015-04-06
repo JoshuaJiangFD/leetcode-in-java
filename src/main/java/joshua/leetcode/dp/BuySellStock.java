@@ -20,6 +20,20 @@ public abstract class BuySellStock {
 	 
 	 static class Solution1 extends BuySellStock{
 
+		 /**
+		  * an unnatural case of buying and selling stocks-- you never know what market looks like at next moment.
+		  * Under this special hypothesis, the best strategy would be:
+		  * 1) at every moment, hold the max profit you can get the previous market as <code>maxProfit</code>,
+		  * and your bid price;
+		  * 2) at next moment: compare the price with your bid price, 
+		  * a)if lower now, change your bid price, which mean:
+		  *     you have the possibility to gain more profit by buying stock at this moment, but only possibility for now
+		  *     if the current price is high than your bid price before, then no need to consider buying stock at this moment,
+		  *     'cause you can gain more just with your previous bid price, and wait the next high price to sell it;
+		  *     
+		  * b) instead, if higher now, you should only consider whether it increase your profit by selling it now, that means:
+		  *    maxProfit=max[(current price-bid price),maxProfit]    
+		  */
 		@Override
 		public int maxProfit(int[] prices) {
 			int maxProfit=0;

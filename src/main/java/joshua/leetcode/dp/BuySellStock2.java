@@ -21,6 +21,10 @@ public abstract class BuySellStock2 {
 	
 	static class Solution extends BuySellStock2{
 
+		/**
+		 * imaging connecting all stock price to a line chart, 
+		 * need to capture all up slope and summarize all the profit we can get
+		 */
 		@Override
 		public int maxProfit(int[] prices) {
 			int maxProfit=0;
