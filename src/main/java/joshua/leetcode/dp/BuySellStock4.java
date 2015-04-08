@@ -64,6 +64,7 @@ public abstract class BuySellStock4 {
 
 			for(int i=1;i<len;i++){
 				int diff=prices[i]-prices[i-1];
+				/*for size,  can only calculate it descendingly*/
 				for(int size=k;size>0;size--){
 					local[size]=Math.max(global[size-1]+Math.max(diff, 0), local[size]+diff);
 					global[size]=Math.max(global[size], local[size]);
