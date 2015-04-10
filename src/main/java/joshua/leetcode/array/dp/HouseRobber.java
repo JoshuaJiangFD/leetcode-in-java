@@ -26,13 +26,13 @@ public abstract class HouseRobber {
 		/**
 		 * Question is abstracted as find the optimal subsequence without adjacent elements but with maximum sum.
 		 * For num[1,..n], at position i, if we know the maximum value of num[1,..i] with and without element i,
-		 * as A(i):		the maximum value of num[1,..i] including element i
-		 *    B(i):		the maximum value of num[1,..i] excluding element i
+		 * as A(i):		the maximum amount robbed from num[1,..i] including element i
+		 *    B(i):		the maximum amount robbed from num[1,..i] excluding element i
 		 *    
 		 * the the values at position i will be:
 		 * 
 		 * A(i) = B(i-1)+num[i]
-		 * B(i) = max[A(i-1),	B(i-1)]
+		 * B(i) = max[A(i-1),B(i-1)]
 		 * 
 		 * the maximum value of num[1,..n] will be:
 		 * Max(1,..,n)=max(A(n),B(n))
