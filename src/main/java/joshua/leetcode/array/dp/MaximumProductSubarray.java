@@ -1,25 +1,31 @@
 package joshua.leetcode.array.dp;
 
+/**
+ * 152	Maximum Product Subarray
+ * @see <a href="https://leetcode.com/problems/maximum-product-subarray/">leetcode link</a>
+ * @author joy
+ *
+ */
 public abstract class MaximumProductSubarray {
 
 	/*
-	 * Find the contiguous subarray within an array (containing at least one number) 
+	 * Find the contiguous sub-array within an array (containing at least one number) 
 	 * which has the largest product.
 
-	 * For example, given the array [2,3,-2,4], the contiguous subarray [2,3] has the largest product = 6.
+	 * For example, given the array [2,3,-2,4], the contiguous sub-array [2,3] has the largest product = 6.
 	 */
 	public abstract int maxProduct(int[] A);
 	
 	static class Solution extends MaximumProductSubarray{
 
 		/**
-		 * define A[i...j] is the subarray of A indexed from 1 to j.</br>
-		 * MP[i...j] is the the largest product of contiguous subarray within A[i...j];</br>
-		 * MaxPj[i...j] is the the largest product of contiguous subarray within A[i...j] AND ended at index j;</br>
-		 * MinPj[i...j] is the the smallest product of contiguous subarray within A[i...j] AND ended at index j;</br>
+		 * Define A[i...j] is the sub-array of A indexed from 1 to j:
+		 * <ul><li>MP[i...j] is the the largest product of contiguous sub-array within A[i...j];</li>
+		 * <li>MaxPj[i...j] is the the largest product of contiguous sub-array within A[i...j] AND ended at index j;</li>
+		 * <li>MinPj[i...j] is the the smallest product of contiguous sub-array within A[i...j] AND ended at index j;</li></ul>
 		 * 
 		 * Due to negative number, the MaxPj[i...j+1] and MinPj[i...j+1] is decided by <b>three</b> factors:</br>
-		 * <i>preMax*A[i]</i> AND  <i>A[i]</i> AND <i>preMin*A[i]</i></br>
+		 * <i>preMax*A[i]</i>, <i>A[i]</i>, <i>preMin*A[i]</i></br>
 		 */
 		@Override
 		public int maxProduct(int[] A) {
