@@ -4,13 +4,22 @@ import joshua.leetcode.binarytree.TreeNode;
 import joshua.leetcode.linkedlist.ListNode;
 
 /**
- * Given a singly linked list where elements are sorted in ascending order, 
- * convert it to a height balanced BST.
+ * 
+ * 109	Convert Sorted List to Binary Search Tree
+ * 
+ * @see <a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">leetcode link</a>.
+ * 
  * @author joy
  *
  */
 public abstract class ListToBST {
 	
+	/**
+	 *  Given a singly linked list where elements are sorted in ascending order, 
+	 *  convert it to a height balanced BST.
+	 * @param head
+	 * @return
+	 */
 	public abstract TreeNode sortedListToBST(ListNode head);
 	
 	/**
