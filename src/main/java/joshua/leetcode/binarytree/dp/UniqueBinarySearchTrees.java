@@ -21,6 +21,13 @@ public abstract class UniqueBinarySearchTrees {
 	 */
 	public abstract int numTrees(int n);
 
+	/**
+	 * For example, given n=6, consider all the cases of left subtree and right subtree
+	 * (left 0, right 5), (left 1, right 4),...,(left 5, right 0)
+	 * so we can store calculated values and use them calculate larger n.
+	 * @author joy
+	 *
+	 */
 	static class Solution1 extends UniqueBinarySearchTrees {
 
 		@Override
@@ -57,7 +64,7 @@ public abstract class UniqueBinarySearchTrees {
 							num += result.get(sentry) * result.get(sentry);
 						sentry--;
 					}
-					result.add(num);
+					result.add(num); 
 				}
 				i++;
 			}
