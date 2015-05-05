@@ -63,7 +63,7 @@ public class ListNode {
 			sBuilder.append(head.val);
 			head=head.next;
 			if(head!=null)
-				sBuilder.append("-->");
+				sBuilder.append("->");
 		}
 		return sBuilder.toString();
 	}
