@@ -2,7 +2,7 @@ package joshua.leetcode.dp;
 
 /**
  * Given a string S, find the longest palindromic substring in S.</br>
- * Solution: dynamic programming.</br> 
+ * Solution1: dynamic programming.</br>
  *  <b>Time Complexity</b>: o(n<sup>2</sup>), <b>space complexity</b>: o(n<sup>2</sup>)</br></br> 
  *  
  * @see {@link joshua.leetcode.strings.LongestPalindromicSubstring}
