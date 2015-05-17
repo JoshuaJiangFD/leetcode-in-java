@@ -32,7 +32,7 @@ public abstract class JumpGame {
 			int end=A.length-1;
 			for(int i=A.length-2;i>-1;i++){
 				if(A[i]+i>=end)
-					end=i;
+					end=i;/*meas next time, if you can reach end, you can reach the last position.*/
 			}
 			return end==0;
 		}
