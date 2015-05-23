@@ -129,6 +129,7 @@ public abstract class MinimumSizeSubarraySum {
 
         @Override
         public int minSubArrayLen(int s, int[] nums) {
+            int miniLenth=Integer.MAX_VALUE;
             if (nums == null || nums.length == 0) {
                 return 0;
             }
@@ -138,8 +139,12 @@ public abstract class MinimumSizeSubarraySum {
                 nums[i]+=nums[i-1];
             }
             for(int i=1;i<nums.length;i++){
+                if(nums[i]<s)
+                    continue;
 
             }
+            return miniLenth;
         }
+
     }
 }
