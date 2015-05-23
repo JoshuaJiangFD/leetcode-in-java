@@ -47,8 +47,9 @@ public abstract class ContainerWithMostWater {
 		/**
 		 * set two pointers, one at the head, one at the tail.
 		 * each time, find out which end should move by identify the smaller values.
-		 * suppose height at head node is 5, and height at tail node is 7, then move the head node until next node larger than 5.
+		 * suppose height at head node is 5, and height at tail node is 7, then move the head node until next node larger than 7.
 		 * only by this way will it be possible to find next larger area with head and tail nodes as boundaries.
+		 *
 		 * move head or tail until they meet. 
 		 */
 		@Override
