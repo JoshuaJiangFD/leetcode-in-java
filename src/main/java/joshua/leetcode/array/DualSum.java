@@ -7,7 +7,7 @@ import java.util.HashMap;
 /**
  * Two Sum.</br>
  * <B>tags:</B> Array, HashTable.
- * @see <a href="https://oj.leetcode.com/problems/two-sum/">https://oj.leetcode.com/problems/two-sum/</a>
+ * @see <a href="https://oj.leetcode.com/problems/two-sum/">https://oj.leetcode.com/problems/two-sum/</a></br>
  * 
  * @author Joshua.Jiang
  *
@@ -32,6 +32,11 @@ public abstract class DualSum {
 	 */
 	public abstract int[] twoSum(int[] numbers, int target);
 	
+	/**
+	 * use HashMap to find the element.
+	 * @author joy
+	 *
+	 */
 	static class Solution1 extends DualSum{
 
 		@Override
@@ -50,6 +55,15 @@ public abstract class DualSum {
 		}
 	}
 	
+	/**
+	 * 1)sort the array firstly;
+	 * 2)set two pointers, one at the head, one at the tail;
+	 * 3)move the tail or head pointer if the sum is bigger or smaller than the target value;
+	 * 4)function exit if the two pointers meet or we find the pair with correct sum;
+	 * 
+	 * @author joy
+	 *
+	 */
 	static class Solution2 extends DualSum{
 
 		@Override

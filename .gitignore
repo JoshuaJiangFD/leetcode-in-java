@@ -45,5 +45,10 @@ Temporary Items
 /target/
 /.classpath
 /.project
+
+#directories on IntelliJ
 *.iml
 .idea/
+Leetcode.iml
+
+

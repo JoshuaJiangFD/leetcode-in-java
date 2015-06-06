@@ -28,7 +28,7 @@ public abstract class InsertionSortList {
 						start=start.next;
 					}
 				}
-				//can't find the positon between head and lastSorted, move cursor and lastSorted one step forward.
+				//can't find the position between head and lastSorted, move cursor and lastSorted one step forward.
 				if(start==lastSorted.next)
 				{
 					lastSorted=cursor;

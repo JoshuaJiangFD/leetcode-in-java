@@ -5,10 +5,20 @@ public class ListNode {
 	public int val;
 	public ListNode next;
 
-	ListNode(int x) {
+	public 	ListNode(int x) {
 		val = x;
 		next = null;
 	}
+	
+	
+
+	public ListNode(int val, ListNode next) {
+		super();
+		this.val = val;
+		this.next = next;
+	}
+
+
 
 	public static ListNode buildList(int[] vals){
 		if(vals==null||vals.length==0)
@@ -53,7 +63,7 @@ public class ListNode {
 			sBuilder.append(head.val);
 			head=head.next;
 			if(head!=null)
-				sBuilder.append("-->");
+				sBuilder.append("->");
 		}
 		return sBuilder.toString();
 	}

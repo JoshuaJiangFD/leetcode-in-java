@@ -36,8 +36,10 @@ public abstract class BSTIterator {
 
 		Stack<TreeNode> stack=new Stack<TreeNode>();
 		
-		/*Implicit super constructor BSTIterator() is undefined for default constructor. 
-		 *Must define an explicit constructor*/
+		/*
+		 * Implicit super constructor BSTIterator() is undefined for default constructor. 
+		 * Must define an explicit constructor
+		 */
 		public Solution(TreeNode root) {
 			super(root);
 			if(root==null)
