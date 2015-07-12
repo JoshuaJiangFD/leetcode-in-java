@@ -25,7 +25,13 @@ public abstract class ReverseLinkedList {
 		public ListNode reverseList(ListNode head) {
 			return reverse(null,head);
 		}
-		
+
+		 /**
+		  * remove head from  the left and add to the head of the reversed.
+		  * @param reversed list already reversed
+		  * @param left  remaining list
+		  * @return
+		  */
 		private ListNode reverse(ListNode reversed, ListNode left){
 			if(left==null)
 				return reversed;
