@@ -74,7 +74,7 @@ public abstract class LargestRectangleInHistogram {
 	
 	/**
 	 * <p><b>linear complexity, stack</b>
-	 * For every bar 'x', if we calculate the area with 'x' as the smallest bar in the rectangle.
+	 * For every bar 'x', we  can try to calculate the area with 'x' as the smallest bar in the rectangle.
 	 * If we calculate such area for every bar and find the maximum, then the task is done.
 	 * The key is for every bar 'x', find the leftmost and rightmost boundary which are no-smaller than bar 'x', name them as
 	 * 'left index' and 'right index' of bar 'x'.</p>

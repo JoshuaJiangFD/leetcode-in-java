@@ -45,7 +45,7 @@ public abstract class LongestPalindromicSubstring {
 	 * Given known LPS[i...j-1] and LPS[i+1...j], we have:
 	 * <table>
 	 * <tr>
-	 * <td>LPS[i...j-1]=</td>
+	 * <td>LPS[i...j]=</td>
 	 * <td><b>true</b></td>
 	 * <td>if S[i]==S[j] and LPS[i-1...j-1]==<b>true</b></td>
 	 * </tr>
