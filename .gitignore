@@ -47,5 +47,8 @@ Temporary Items
 /.project
 
 #directories on IntelliJ
-/.idea/
+*.iml
+.idea/
 Leetcode.iml
+
+
