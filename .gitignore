@@ -42,6 +42,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Directories on Eclipse
 /target/
 /.classpath
 /.project
