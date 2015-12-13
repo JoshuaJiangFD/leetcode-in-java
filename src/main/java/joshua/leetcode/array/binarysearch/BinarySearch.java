@@ -38,8 +38,9 @@ public class BinarySearch {
     }
 
     /**
-     *实现查找时，如果存在则返回最左侧的元素的下标（YES_RIGHT）,
+     *实现查找时，如果存在则返回最右侧的元素的下标（YES_RIGHT）,
      *如果不存在则返回可插入的位置的下标的前一个位置，或者说最后一个小于target的元素的下标(NO_LEFT)
+     *
      * @param nums
      * @param target
      * @return

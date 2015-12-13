@@ -50,7 +50,7 @@ public abstract class JumpGame {
 			for(int i=A.length-2;i>-1;i++){
 				for(int j=i+1;j<A.length;j++){
 					if(flags[j]==true&&(A[j]+i>=j)){
-						flags[i]=true;/*so from position i, it can reach position j, can j can jump to the end. so flags[i]=true;*/
+						flags[i]=true;/*so from position i, it can reach position j, and from j can jump to the end. so flags[i]=true;*/
 						break;
 					}
 				}
