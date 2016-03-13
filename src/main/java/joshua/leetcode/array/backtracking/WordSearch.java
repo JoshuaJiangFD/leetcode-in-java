@@ -48,8 +48,8 @@ public abstract class WordSearch {
 			int width=board[0].length;
 			Stack<Integer> track=new Stack<Integer>();
 			return search(board,word,track,height,width);
-			
 		}
+
 		private boolean search(char[][] board,String word,Stack<Integer> track,int height,int width){
 			if(track.size()==0){
 				for(int i=0;i<height;i++)
@@ -115,7 +115,6 @@ public abstract class WordSearch {
 				}
 				return false;
 			}
-			
 		}
 	}
 }

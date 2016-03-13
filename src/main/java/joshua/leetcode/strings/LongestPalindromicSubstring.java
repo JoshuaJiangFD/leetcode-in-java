@@ -2,11 +2,7 @@ package joshua.leetcode.strings;
 
 /**
  * Given a string S, find the longest palindromic substring in S.</br>
- * 1) expanded from its center</br>
- * <b>Time Complexity</b>: o(n<sup>2</sup>), <b>space complexity</b>: o(1)</br>
- * 2) Manacher’s Algorithm</br>
- *  <b>Time Complexity</b>: o(n),<b>space complexity</b>: o(1)</br>
- * 
+ *
  * @see {@link joshua.leetcode.dp.LongestPalindromicSubstring}
  * @author joy
  *
@@ -16,6 +12,9 @@ public abstract class LongestPalindromicSubstring {
 	public abstract String longestPalindrome(String s);
 	
 	/**
+	 * <b>Solution 1: expanded from its center</b><br>
+	 * <b>Time Complexity</b>: o(n<sup>2</sup>), <b>space complexity</b>: o(1)<br>
+	 *
 	 * We observe that a palindrome mirrors around its center. 
 	 * Therefore, a palindrome can be expanded from its center, and there are only 2N-1 such centers.
 
@@ -23,7 +22,7 @@ public abstract class LongestPalindromicSubstring {
      * The reason is the center of a palindrome can be in between two letters. 
      * Such palindromes have even number of letters (such as “abba”) and its center are between the two ‘b’s.
      * 
-     * @see <a href="http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html">leetcode</a>
+     * @see <a href="http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html">leetcode blog's solution</a>
 	 * @author joy
 	 *
 	 */
@@ -56,6 +55,22 @@ public abstract class LongestPalindromicSubstring {
 			}
 			return s.substring(head, tail+1);
 		}
-		
 	}
+
+	/**
+	 * 2) Manacher’s Algorithm<br>
+	 * <b>Time Complexity</b>: o(n),<b>space complexity</b>: o(1)<br>
+	 *
+	 * <a href="http://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-1/">solution link</a>
+	 */
+	static class Solution2 extends LongestPalindromicSubstring {
+
+		// TODO: implement Manacher's Algorithm.
+		@Override
+		public String longestPalindrome(String s) {
+			return null;
+		}
+	}
+
+
 }

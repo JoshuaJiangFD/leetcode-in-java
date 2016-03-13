@@ -25,19 +25,19 @@ public abstract class LongestPalindromicSubstring {
 
 	/**
 	 *Assume: S[i...j] is the substring
-	 * of S indexed from i to j(-1<i<=j<length). and LPS[i...j] is the longest
+	 * of S indexed from i to j(-1&lt;i&lt;=j&lt;length). and LPS[i...j] is the length of the longest
 	 * palindromic substring of S[i...j],<br>
 	 * Given known LPS[i...j-1] and LPS[i+1...j], we have:
 	 * <table>
 	 * <tr>
-	 * <td>LPS[i...j-1]=</td>
+	 * <td>LPS[i...j]=</td>
 	 * <td>max(LPS[i...j-1],LPS[i+1...j])</td>
 	 * <td>if S[i]!=S[j]</td>
 	 * </tr>
 	 * <tr>
 	 * <td></td>
 	 * <td>LPS[i+1...j-1]+2</td>
-	 * <td>otherwise</td>
+	 * <td>if S[i]==S[j] and LPS[i-1...j-1]==<b>true</b></td>
 	 * </tr>
 	 * </table>
 	 * </br> Or we explain it in another way, LPS[i...j] is <b>true </b> if
