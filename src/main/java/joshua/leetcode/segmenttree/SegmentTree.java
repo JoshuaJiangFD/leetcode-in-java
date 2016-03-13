@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ *
+ */
 public class SegmentTree {
 
 	private  static final Function sumFunc = new Function() {
@@ -108,7 +111,7 @@ public class SegmentTree {
 	public STNode[] constructST(int[] arr, Function func) {
 		/**
 		 * calculate the size of the segment tree for n-size array: A(n)
-		 * A segment tree is modeled as full binary tree with 2*n-1 nodes, within which n leaf nodes and n-1 non-leaf nodes.
+		 * A segment tree is modeled as full binary tree with 2*n-1 nodes: n leaf nodes and n-1 non-leaf nodes.
 		 * All leaf nodes are the original elements in A(n)
 		 * All non-leaf nodes are the calculated node containing the value of function applied on all leaf nodes under each.
 		 * A segment tree is stored in array, combined with the nature of full binary tree, we deduce that:
@@ -165,7 +168,10 @@ public class SegmentTree {
 
 	public static class STNode{
 		public int value;
-		public int index;/*for FunctionType.Min: the index of value in original array*/
+		/**
+		 * for FunctionType.Min: the index of value field in original array
+		 */
+		public int index;
 		public int startIdx;
 		public int endIdx;
 		

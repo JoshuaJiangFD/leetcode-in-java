@@ -13,5 +13,6 @@ public class RemoveDuplicateLettersTest {
         assertEquals("bacdf", sol.removeDuplicateLetters(test1));
         String test2 = "bbacac";
         assertEquals("bac", sol.removeDuplicateLetters(test2));
+        System.out.println(12 & -12);
     }
 }
