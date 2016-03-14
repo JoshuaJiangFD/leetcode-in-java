@@ -7,7 +7,7 @@ import java.util.List;
  * 315. Count of Smaller numbers After self
  *
  * @see <a href="https://leetcode.com/problems/count-of-smaller-numbers-after-self/">leetcode link</a>
- * <p>
+ * <p/>
  * Created by joshua on 1/3/16.
  */
 public abstract class CountOfSmallerNumbersAfterSelf {
@@ -16,9 +16,9 @@ public abstract class CountOfSmallerNumbersAfterSelf {
      * You are given an integer array nums and you have to return a new counts array.
      * The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].
      * Example:
-     * <p>
+     * <p/>
      * Given nums = [5, 2, 6, 1]
-     * <p>
+     * <p/>
      * To the right of 5 there are 2 smaller elements (2 and 1).
      * To the right of 2 there is only 1 smaller element (1).
      * To the right of 6 there is 1 smaller element (1).
@@ -32,7 +32,7 @@ public abstract class CountOfSmallerNumbersAfterSelf {
 
     /**
      * Divide And Conquer way.
-     * <p>
+     * <p/>
      * The idea is to compare the bits from high to low position, every iteration groups elements into two.
      * like using 4'1000' and elements [4,5,2,3], then higher groups(4 & 4 = 4, 4&2 = 0) is [4,5],
      * lower group is [2,3]. In every such grouping, we do it in right to left order.
@@ -142,7 +142,7 @@ public abstract class CountOfSmallerNumbersAfterSelf {
                 int leftValue = nums[leftIndex];
                 int rightValue = nums[rightIndex];
                 if (leftValue > rightValue) {
-                    result.set(leftIndex, result.get(leftIndex) + (end - rightPointer + 1));
+                    result.set(leftIndex, result.get(leftIndex) + end - rightPointer + 1);
                     sortedIndicies[sortIndex++] = leftIndex;
                     leftPointer++;
                 } else {
@@ -158,7 +158,7 @@ public abstract class CountOfSmallerNumbersAfterSelf {
                 sortedIndicies[sortIndex++] = indices[rightPointer];
                 rightPointer++;
             }
-            System.arraycopy(sortedIndicies, 0, indices, 0, sortedIndicies.length);
+            System.arraycopy(sortedIndicies, 0, indices, start, sortedIndicies.length);
         }
     }
 }
