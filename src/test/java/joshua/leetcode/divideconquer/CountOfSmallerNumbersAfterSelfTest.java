@@ -19,14 +19,14 @@ public class CountOfSmallerNumbersAfterSelfTest {
     @Before
     public void setUp() {
 
-//        target = new int[]{5,2,6,1};
-//        expected = new int[]{2,1,1,0};
+        target = new int[]{5,2,6,1};
+        expected = new int[]{2,1,1,0};
 
 //        target = new int[]{0, 2, 1};
 //        expected = new int[]{0, 1, 0};
 
-        target = new int[]{5, 2, 6, 1};
-        expected = new int[]{2, 1, 1, 0};
+//        target = new int[]{5, 2, 6, 1};
+//        expected = new int[]{2, 1, 1, 0};
     }
 
     @Test
