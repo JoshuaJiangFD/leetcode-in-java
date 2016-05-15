@@ -37,44 +37,43 @@ public abstract class WordLadder {
     public abstract int ladderLength(String beginWord, String endWord, Set<String> wordList);
 
 
+    /**
+     * BFS (breath first searching)
+     * 类似于Dijkstra的最短路径算法。   
+     */
     public static class Solution1 extends WordLadder {
 
         @Override
         public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
             Queue<String> queue = new LinkedList<String>();
-            queue.addAll(wordList);
-            queue.add(endWord);
+            queue.add(beginWord);
             int resultLength = 1;
             while (!queue.isEmpty()) {
                 int sizeInIteration = queue.size();
                 for (int i = 0; i < sizeInIteration; i++) {
-
-                }
-            }
-        }
-
-
-        /**
-         * judge whether two words can be transformed.
-         * Note:
-         * All words have the same length.
-         * All words contain only lowercase alphabetic characters.
-         *
-         * @param word1
-         * @param word2
-         * @return
-         */
-        private boolean canTransform(String word1, String word2) {
-            int diffs = 0;
-            for (int i = 0; i < word1.length(); i++) {
-                if (word1.charAt(i) != word2.charAt(i)) {
-                    diffs++;
-                    if (diffs == 2) {
-                        break;
+                    String polled = queue.poll();
+                    char[] arr = polled.toCharArray();
+                    for (int j = 0; j < polled.length(); j++) {
+                        char ch = arr[j];
+                        for (int k = 0; k < 26; k++) {
+                            arr[j] = (char)('a' + k);
+                            if (arr[j] != ch) {
+                                String str = new String(arr);
+                                if (endWord.endsWith(str)) {
+                                    return resultLength + 1;
+                                }
+                                if (wordList.contains(str)) {
+                                    wordList.remove(str);
+                                    queue.add(str);
+                                }
+                            }
+                        }
+                        arr[j] = ch;
                     }
                 }
+                resultLength++;
             }
-            return diffs == 1;
+            return 0;
         }
     }
 }

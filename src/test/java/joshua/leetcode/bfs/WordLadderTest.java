@@ -31,7 +31,6 @@ public class WordLadderTest {
     @Test
     public void testSolution1 () {
         WordLadder.Solution1 solution1 = new WordLadder.Solution1();
-        System.out.println(wordList.size());
         assertEquals(5, solution1.ladderLength(beginWord, endWord, wordList));
     }
 }
