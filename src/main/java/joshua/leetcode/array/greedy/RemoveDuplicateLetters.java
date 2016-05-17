@@ -33,6 +33,9 @@ public abstract class RemoveDuplicateLetters {
     static class Solution1 extends RemoveDuplicateLetters {
 
         /**
+         * 结果要求是按照字母顺序从小到大排列的。
+         * 算法：
+         *
          * 使用栈来保存最后的结果，并用额外空间保存所有的字母的出现次数。
          * 元素进栈时，和栈顶元素比较。
          * 同时需要保存该字母是否已经在结果中的信息。例如
@@ -58,8 +61,10 @@ public abstract class RemoveDuplicateLetters {
                     counters.put(ch, counters.get(ch) - 1);
                     continue;
                 }
+                //为ch找一个最靠前的位置，只要栈顶字母比ch大，后面还会再出现元素，就会一直弹出栈顶元素。
                 while (!result.isEmpty()) {
                     char top = result.getLast();
+                    // 如果后面不会再出发top这个字母，则不能出栈了。
                     if (counters.get(top) == 1)
                         break;
                     if (top >= ch) {
