@@ -1,12 +1,11 @@
 package joshua.leetcode.dp;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * Longest Increasing Subsequence
- *
+ * <p/>
  * Created by joy on 2015/11/3.
  *
  * @see <a href="https://leetcode.com/problems/longest-increasing-subsequence/">leetcode link</a>
@@ -67,12 +66,13 @@ public abstract class LongestIncreasingSubsequence {
      * <p/>
      * 维护的该数组为动态数组tailtable, tailtable[j]存储所有长度为j的递增组序列中末尾元素最小的元素。
      * 每次外层循环，对于nums[i],在tailtable中二分查找该插入的位置j（如果相同则跳过本次循环），更新tailtable[j]为nums[i],
-     * 此时长度为j的目标子序列为tailtable[j-1]对应的目标子序列加上nums[i]得到，类比：
-     * 1:[1]
-     * 2:[1,4]
+     * 此时长度为j的目标子序列为tailtable[j-1]对应的目标子序列加上nums[i]得到.
+     * 举例: 原数组为[1,4,2,3],
+     * 1:[1],即长度为1的序列，为[1],末尾元素为1
+     * 2:[1,4],即长度为2的序列， 为[1,4]，末尾元素为4
      * 在遇到2时，[1]追加2替代[1,4]为：
      * 1:[1]
-     * 2:[1,2]
+     * 2:[1,2]，长度为2的序列，末尾元素更新为为2，2被4取代因为2更小，后面更可能会被延长
      * 在遇到3是时，[1,2]追加3，变成：
      * 1:[1]
      * 2:[1,2]
@@ -89,22 +89,21 @@ public abstract class LongestIncreasingSubsequence {
         public int lengthOfLIS(int[] nums) {
             if (nums == null | nums.length == 0)
                 return 0;
-            List<Integer> tailTable=new ArrayList<Integer>();
+            List<Integer> tailTable = new ArrayList<Integer>();
             for (int i = 0; i < nums.length; i++) {
                 //binary search nums[i] in tailTable
-                int beg=0,end=tailTable.size()-1;
-                while(end>=beg){
-                    int mid=(end+beg)>>1;
-                    if(tailTable.get(mid)>=nums[i]) end=mid-1;
+                int beg = 0, end = tailTable.size() - 1;
+                while (end >= beg) {
+                    int mid = (end + beg) >> 1;
+                    if (tailTable.get(mid) >= nums[i]) end = mid - 1;
                     else
-                        beg=mid+1;
+                        beg = mid + 1;
                 }
                 /*beg is either the position to insert(if not found) or the found index*/
-                if(beg==tailTable.size()){
+                if (beg == tailTable.size()) {
                     tailTable.add(nums[i]);
-                }
-                else if(tailTable.get(beg)!=nums[i])
-                    tailTable.set(beg,nums[i]);
+                } else if (tailTable.get(beg) != nums[i])
+                    tailTable.set(beg, nums[i]);
             }
             return tailTable.size();
         }
