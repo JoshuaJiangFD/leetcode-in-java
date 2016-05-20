@@ -1,6 +1,9 @@
 package joshua.leetcode.bfs;
 
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 310. Minimum Height Trees<br/>
@@ -57,9 +60,10 @@ public abstract class MinimumHeightTrees {
 
     /**
      * 思路来自拓扑排序。
-     * 这个问题先简化为假如能找到图的最长路径，那么minimum height tree的顶点就是这条路径的中间节点，如果路径长度为奇数就是1个，
+     * 这个问题先简化为,假如能找到图的最长路径，那么minimum height tree的顶点就是这条路径的中间节点，如果路径长度为奇数就是1个，
      * 路径长度为偶数就是2个。
-     * 如何找到这个中间节点可以用两端出发，步长为1同时移动，相遇时的节点就是中间节点。
+     * 如何找到这个中间节点可以从路径两端出发，以步长为1同时移动，相遇时的节点就是中间节点。
+     *
      * 这个方法借鉴到这个问题上，从所有的叶子节点出发，每次剪去所有的叶子节点，然后更新所有其他节点的degree，直到只剩下不多于两个节点
      * 迭代终止。
      * <p/>
@@ -70,7 +74,46 @@ public abstract class MinimumHeightTrees {
 
         @Override
         public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-            return null;
+            LinkedList<Integer> leaves = new LinkedList<Integer>();
+            if (n == 1) {
+                leaves.add(0);
+                return leaves;
+            }
+            // 初始化一个类似邻接矩阵(Adjacency Matrix)标识的结构从来存储每个顶点上的边信息，set的大小就是外层list对应下标的度，
+            // 这个信息用来判断叶子节点
+            Set[] adjMatrix = new Set[n];
+            for (int[] edge : edges) {
+                if (adjMatrix[edge[0]] == null) {
+                    Set<Integer> adjs = new HashSet<Integer>();
+                    adjMatrix[edge[0]] = adjs;
+                }
+                adjMatrix[edge[0]].add(edge[1]);
+                if (adjMatrix[edge[1]] == null) {
+                    Set<Integer> adjs = new HashSet<Integer>();
+                    adjMatrix[edge[1]] = adjs;
+                }
+                adjMatrix[edge[1]].add(edge[0]);
+            }
+            // 初始化叶子节点
+            for(int i = 0; i < adjMatrix.length; i ++) {
+                if (adjMatrix[i].size() == 1) {
+                    leaves.add(i);
+                }
+            }
+            // 裁剪叶子节点
+            while(n > 2) {
+                n -= leaves.size();
+                int size = leaves.size();
+                for(int i = 0; i< size; i++) {
+                    int leave = leaves.removeFirst();
+                    int adj = (Integer)adjMatrix[leave].iterator().next();
+                    adjMatrix[adj].remove(leave);
+                    if (adjMatrix[adj].size() == 1) {
+                        leaves.add(adj);
+                    }
+                }
+            }
+            return leaves;
         }
     }
 }
