@@ -47,6 +47,7 @@ public abstract class GroupAnagrams {
         public List<List<String>> groupAnagrams(String[] strs) {
             Map<String, List<String>> anagrams = new HashMap<String, List<String>>();
             for (String str : strs) {
+                // flags用来作为anagram的hash key，例如"aab", "aba"的key都是“00...000012”，前面是24个零。
                 int[] flags = new int[26];
                 for(char ch : str.toCharArray()) {
                     flags[ch - 'a']++;
