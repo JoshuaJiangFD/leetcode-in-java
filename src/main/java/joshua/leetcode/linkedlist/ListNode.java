@@ -1,7 +1,27 @@
 package joshua.leetcode.linkedlist;
 
 public class ListNode {
-	
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		ListNode listNode = (ListNode) o;
+
+		if (val != listNode.val) return false;
+		if (next != null ? !next.equals(listNode.next) : listNode.next != null) return false;
+
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = val;
+		result = 31 * result + (next != null ? next.hashCode() : 0);
+		return result;
+	}
+
 	public int val;
 	public ListNode next;
 
@@ -9,16 +29,12 @@ public class ListNode {
 		val = x;
 		next = null;
 	}
-	
-	
 
 	public ListNode(int val, ListNode next) {
 		super();
 		this.val = val;
 		this.next = next;
 	}
-
-
 
 	public static ListNode buildList(int[] vals){
 		if(vals==null||vals.length==0)
