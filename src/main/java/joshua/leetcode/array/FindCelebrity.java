@@ -1,5 +1,7 @@
 package joshua.leetcode.array;
 
+import joshua.leetcode.solutiontag.TwoPointers;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -92,5 +94,28 @@ public abstract class FindCelebrity {
             }
             return celebrity;
         }
+    }
+
+    @TwoPointers
+    public abstract static  class Solution2 extends FindCelebrity {
+
+
+        @Override
+        public int findCelebrity(int n) {
+            int l = 0;
+            int r = n -1;
+            while ( l < r) {
+                if (knows(l, r)) ++l;
+                else r--;
+            }
+            for (int i = 0; i < n; i ++) {
+                if (i != l) {
+                    if (knows(i, l) || !knows(l, i)) return -1;
+                }
+            }
+            return l;
+        }
+
+
     }
 }
