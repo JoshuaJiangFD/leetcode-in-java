@@ -2,6 +2,8 @@
 
 package joshua.leetcode.design;
 
+import joshua.leetcode.solutiontag.MinHeap;
+
 import java.util.PriorityQueue;
 
 /**
@@ -53,10 +55,12 @@ public abstract class MedianFinder {
      * 如果两个堆大小相差1，则median就是aHeap的栈顶元素。
      *
      * 在Java中，PriorityQueue的内部实现就是min Heap。
+     *
      * 这样PriorityQueue的头部对应min heap的栈顶。压入栈的操作等同于入队操作，优先队列会调整栈顶元素使其最小。
      * 至于MaxHeap可以使用元素的负值插入到priorityQueue中，这样队列头部的元素的相反值就是最大值了，实现了max heap的作用。
      *
      */
+    @MinHeap
     public static class Solution1 extends MedianFinder {
 
         /**
