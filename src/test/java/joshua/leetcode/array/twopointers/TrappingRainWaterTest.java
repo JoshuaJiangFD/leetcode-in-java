@@ -25,4 +25,12 @@ public class TrappingRainWaterTest {
 		}
 	}
 
+	@Test
+	public void testSolution1() {
+		TrappingRainWater sol=new TrappingRainWater.Solution1();
+		for (int[] key : cases.keySet()) {
+			assertEquals((int)cases.get(key), sol.trap(key));
+		}
+	}
+
 }
