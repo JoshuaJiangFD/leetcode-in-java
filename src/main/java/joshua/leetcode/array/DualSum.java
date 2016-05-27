@@ -1,5 +1,7 @@
 package joshua.leetcode.array;
 
+import joshua.leetcode.solutiontag.TwoPointers;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -64,6 +66,7 @@ public abstract class DualSum {
 	 * @author joy
 	 *
 	 */
+	@TwoPointers
 	static class Solution2 extends DualSum{
 
 		@Override

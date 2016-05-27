@@ -1,4 +1,4 @@
-package joshua.leetcode.array;
+package joshua.leetcode.array.twopointers;
 
 import joshua.leetcode.solutiontag.TwoPointers;
 

@@ -37,6 +37,7 @@ public abstract class TrappingRainWater {
          * 因此可以继续移动低的一侧的指针，同时判断移动的过程中能够trap的水量（小方块），直到到达最低点。
          * 这时候再次判断left pointer和right pointer的大小。
          * 直到两个指针相遇。
+         * <a href ="https://leetcode.com/discuss/16171/sharing-my-simple-c-code-o-n-time-o-1-space">leetcode link</a>
          */
         @Override
         public int trap(int[] height) {
@@ -105,6 +106,44 @@ public abstract class TrappingRainWater {
                     i--;
                 }
             }
+            return water;
+        }
+    }
+
+    /**
+     * 一个更直观的two pointer分解之后的解法
+     *
+     * <a href="https://leetcode.com/discuss/104352/java-2ms-o-n-time-o-1-space">leetcode link</a>
+     */
+    @TwoPointers
+    public static class Solution3 extends TrappingRainWater {
+
+        @Override
+        public int trap(int[] height) {
+            int water = 0;
+            if (height.length < 3) return water;
+
+            int maxHeight = 0;
+            int maxHeightPos = 0;
+            for (int i = 0; i < height.length; i++) {
+                if (height[i] > maxHeight) {
+                    maxHeight = height[i];
+                    maxHeightPos = i;
+                }
+            }
+
+            int prevHeight = height[0];
+            for (int i = 1; i < maxHeightPos; i++) {
+                if (height[i] < prevHeight) water += prevHeight - height[i];
+                else prevHeight = height[i];
+            }
+
+            prevHeight = height[height.length - 1];
+            for (int i = height.length - 1; i > maxHeightPos; i--) {
+                if (height[i] < prevHeight) water += prevHeight - height[i];
+                else prevHeight = height[i];
+            }
+
             return water;
         }
     }
