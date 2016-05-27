@@ -59,4 +59,38 @@ public abstract class ProductOfArrayExceptSelf {
             return fromLeft;
         }
     }
+
+    /**
+     * 方法2是方法1的一种巧妙的改进。
+     * 注意到方法1的两个list,fromLeft和fromRight可以合并。
+     * 在计算完fromLeft之后，实际上可以直接从fromLeft的尾部开始往左扫描，在计算result[k]的时候，
+     * fromLeft[0]用来存储nums[k+1,..,len-1]的乘积，在之前的计算中result[k]存储的是nums[0,...,k-1]的乘积，两者相乘就得到了最终结果。
+     * 同时可以将fromLeft[0]更新为fromLeft[0]*nums[k]
+     */
+    public static class Solution2 extends ProductOfArrayExceptSelf {
+
+        @Override
+        public int[] productExceptSelf(int[] nums) {
+            // i.e. [1,2,3,4]
+            int[] result = new int[nums.length];
+            for (int i = 0; i < nums.length; i++) {
+                if(i == 0) {
+                    result[0] = 1;
+                } else {
+                    result[i] = result[i-1] * nums[i-1];
+                }
+            }
+            /* result is now: [1, 1, 2, 6]
+             * the next iteration will be:
+             * [1,1,2,6] -> [1,1,2,6] -> [4,1,2,6]
+             * [4,1,2,6] -> [4,1,8,6] -> [12,1,8,6]
+             * [12,1,8,6] -> [12,12,8,6] -> [24,12,8,6]
+            */
+            for(int i = nums.length - 1; i > 0; i--) {
+                result[i] = result[i] * result[0];
+                result[0] *= nums[i];
+            }
+            return result;
+        }
+    }
 }
