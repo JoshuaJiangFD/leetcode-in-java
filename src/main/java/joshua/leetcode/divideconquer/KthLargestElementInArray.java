@@ -1,5 +1,7 @@
 package joshua.leetcode.divideconquer;
 
+import joshua.leetcode.solutiontag.MinHeap;
+
 /**
  * Kth Largest Element in an Array
  *
@@ -25,6 +27,7 @@ public abstract class KthLargestElementInArray {
 
     /**
      * Divide and Conquer way.
+     *
      * partition the array using quick-sorting way(descending sort), every pass find the final position of an element.
      * If this position's index is bigger than k-1, quick sort the partition on left, otherwise right.
      * function returns if position is found at index k-1.
@@ -71,6 +74,7 @@ public abstract class KthLargestElementInArray {
      *
      * @author joy
      */
+    @MinHeap
     static class Solution2 extends KthLargestElementInArray {
 
         @Override
