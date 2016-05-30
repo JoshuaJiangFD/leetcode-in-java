@@ -34,15 +34,35 @@ public abstract class Search2DMatrixII {
     public abstract boolean searchMatrix(int[][] matrix, int target);
 
     /**
-     *  观察矩阵可以发现， 每个对角线上的元素matrix[i,i]都大于所有其他index小于i的元素，即该元素的左上角的矩阵。
-     *  因此可以先对对角线上元素做二分查找。
+     *  观察矩阵可以发现， 斜对角线上的每个元素matrix[i,j]都是对应的列的最小元素，是对应的行的最大元素。
+     *  因此可以比较斜对角线上的最右上角元素ele和target的大小关系：
+     *  如果ele > target, 可以过滤掉ele对应的行
+     *  如果ele < target, 可以过滤掉ele对应的列
+     *  如果相等可以直接返回。
+     *
+     *  这样每次比较都可以过滤掉一行，或者一列，总的时间复杂度就是o(m+n)
      *
      */
     public static class Solution1 extends Search2DMatrixII {
 
         @Override
         public boolean searchMatrix(int[][] matrix, int target) {
-
+            if(matrix == null || matrix[0] == null || matrix[0].length == 0) {
+                return false;
+            }
+            int row = matrix.length, col = matrix[0].length;
+            int i = 0, j = col - 1;
+            while(i < row && j > -1) {
+                int ele = matrix[i][j];
+                if (ele < target) {
+                    i++;
+                } else if (ele > target) {
+                    j--;
+                } else {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

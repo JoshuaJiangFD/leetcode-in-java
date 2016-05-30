@@ -65,6 +65,10 @@ public abstract class TopKFrequentElements {
             Arrays.sort(nums);
             Map<Integer, List<Integer>> frequencyBucket = new HashMap<Integer, List<Integer>>();
             int maxFrequency = 0;
+            /**
+             * 记录下每个number的frequency,相同frequency的numer是存储在同一个key下面的，key就是frequency的值，
+             * 同时记录下最大的frequency.
+             */
             for (int i = 0; i < nums.length; i++) {
                 int count = 1;
                 while (i + 1 < nums.length && nums[i] == nums[i + 1]) {
@@ -79,6 +83,9 @@ public abstract class TopKFrequentElements {
             }
             List<Integer> topK = new ArrayList<Integer>();
             int size = 0;
+            /**
+             * 从maxFrequency递减查找frequencyBucket
+             */
             for (int i = maxFrequency; i > 0; i--) {
                 if (!frequencyBucket.containsKey(i)) {
                     continue;

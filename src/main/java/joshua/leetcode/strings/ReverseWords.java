@@ -6,7 +6,7 @@ package joshua.leetcode.strings;
  * @author Joshua.Jiang
  *
  */
-public abstract class RevserseWords {
+public abstract class ReverseWords {
 
 	/**
 	 * Given an input string, reverse the string word by word.
@@ -34,7 +34,7 @@ public abstract class RevserseWords {
 	  * @author Joshua.Jiang
 	  *
 	  */
-	 static class Solution extends RevserseWords{
+	 static class Solution extends ReverseWords {
 
 		@Override
 		public String reverseWords(String s) {

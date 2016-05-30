@@ -1,7 +1,5 @@
 package joshua.leetcode.strings;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +14,7 @@ public class RevserseWordsTest {
 
 	@Test
 	public void testSolution1() {
-		RevserseWords sol=new RevserseWords.Solution();
+		ReverseWords sol=new ReverseWords.Solution();
 		System.out.print(sol.reverseWords(s));
 	}
 	
