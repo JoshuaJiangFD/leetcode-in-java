@@ -2,7 +2,6 @@ package joshua.leetcode.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -37,7 +36,7 @@ public abstract class TernarySum {
 	  * A derivation of DualSum problem.
 	  * Time Complexity: o(n<sup>2</sup>)
 	  * 
-	  * @see {@link DualSum}
+	  * @see {@link joshua.leetcode.array.twopointers.TwoSum}
 	  * @author joy
 	  *
 	  */

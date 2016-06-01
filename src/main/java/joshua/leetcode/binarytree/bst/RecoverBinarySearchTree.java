@@ -3,6 +3,7 @@ package joshua.leetcode.binarytree.bst;
 
 
 import joshua.leetcode.binarytree.TreeNode;
+import joshua.leetcode.solutiontag.DFS;
 
 /**
  * 99	Recover Binary Search Tree
@@ -33,6 +34,7 @@ public abstract class RecoverBinarySearchTree {
 	 * @author joy
 	 *
 	 */
+	@DFS
 	static class Solution1 extends RecoverBinarySearchTree {
 
 		/**
