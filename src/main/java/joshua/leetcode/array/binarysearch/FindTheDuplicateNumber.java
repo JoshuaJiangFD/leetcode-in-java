@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.array.binarysearch;
 
@@ -7,7 +7,7 @@ package joshua.leetcode.array.binarysearch;
  * <p/>
  * <a href = "https://leetcode.com/problems/find-the-duplicate-number/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class FindTheDuplicateNumber {
 

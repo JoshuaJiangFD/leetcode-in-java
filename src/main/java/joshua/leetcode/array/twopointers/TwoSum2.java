@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.array.twopointers;
 
@@ -10,7 +10,7 @@ import joshua.leetcode.solutiontag.TwoPointers;
  * <p/>
  * <a href = "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class TwoSum2 {
 

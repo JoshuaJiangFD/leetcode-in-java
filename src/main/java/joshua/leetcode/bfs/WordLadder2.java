@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.bfs;
 
@@ -9,7 +9,7 @@ import java.util.*;
  * <p/>
  * <a href="https://leetcode.com/problems/word-ladder-ii/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class WordLadder2 {
 

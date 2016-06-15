@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.math;
 
@@ -7,7 +7,7 @@ import java.io.PipedWriter;
 import joshua.leetcode.solutiontag.Recursive;
 
 /**
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class PowerOfThree {
 

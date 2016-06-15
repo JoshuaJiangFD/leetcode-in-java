@@ -8,7 +8,7 @@ import java.util.Deque;
  * <p/>
  * <a href="https://leetcode.com/problems/sliding-window-maximum/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class SlidingWindowMaximum {
 

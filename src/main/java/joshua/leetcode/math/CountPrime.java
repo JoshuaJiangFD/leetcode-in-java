@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.math;
 
@@ -6,7 +6,7 @@ package joshua.leetcode.math;
  * 204. Count Primes<br/>
  * <a href = "https://leetcode.com/problems/count-primes/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class CountPrime {
 

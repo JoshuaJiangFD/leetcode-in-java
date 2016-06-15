@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.design;
 
@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  * <p/>
  * <a href="https://leetcode.com/problems/find-median-from-data-stream/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class MedianFinder {
 

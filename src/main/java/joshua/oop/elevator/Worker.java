@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.oop.elevator;
 
@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 /**
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public class Worker implements Runnable {
     private Socket s;

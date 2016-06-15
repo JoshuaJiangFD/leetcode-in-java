@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.stack;
 
@@ -12,7 +12,7 @@ import joshua.leetcode.solutiontag.Stacks;
  * <p/>
  * <a href = "https://leetcode.com/problems/evaluate-reverse-polish-notation/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class EvaluateReversePolishNotation {
 

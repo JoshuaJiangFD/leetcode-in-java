@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.array;
 
@@ -6,7 +6,7 @@ package joshua.leetcode.array;
  * 48. Rotate Image<br>
  * <a href="https://leetcode.com/problems/rotate-image/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong 
  */
 public abstract class RotateImage {
 

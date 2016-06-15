@@ -1,9 +1,9 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.oop.elevator;
 
 /**
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public class Main {
 

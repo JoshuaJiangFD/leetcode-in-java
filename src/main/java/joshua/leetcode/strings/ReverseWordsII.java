@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.strings;
 
@@ -7,7 +7,7 @@ package joshua.leetcode.strings;
  * <p/>
  * <a href="https://leetcode.com/problems/reverse-words-in-a-string-ii/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class ReverseWordsII {
 

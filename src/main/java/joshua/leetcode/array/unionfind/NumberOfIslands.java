@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.array.unionfind;
 
@@ -12,7 +12,7 @@ import joshua.leetcode.solutiontag.UnionFind;
  * <p/>
  * <a href="https://leetcode.com/problems/number-of-islands/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class NumberOfIslands {
 

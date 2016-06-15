@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.binarytree;
 
@@ -10,7 +10,7 @@ import java.util.Queue;
  * <p/>
  * <a href = "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class SerializeDeserializeBinaryTree {
 

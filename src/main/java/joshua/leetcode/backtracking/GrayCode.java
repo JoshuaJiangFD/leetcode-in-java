@@ -1,4 +1,4 @@
-// Copyright 2016 Baidu Inc. All rights reserved.
+
 
 package joshua.leetcode.backtracking;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * 89. Gray Code <br>
  * <a href = "https://leetcode.com/problems/gray-code/">leetcode link</a>
  *
- * @author Jiang Yong (jiangyong07@baidu.com)
+ * @author Jiang Yong
  */
 public abstract class GrayCode {
 
